@@ -1,0 +1,678 @@
+/* UNIVERSAL STYLES */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+  }
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+body{ 
+    font-family: IBM Plex Mono;
+    width: 100vw;
+    height: 100vh;
+    /*color: #324376;*/
+    color: #292E1E;
+    display: unset;
+}
+.fa-solid{
+    font-size: 1em;
+    font-weight: 900;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #808782;
+}
+
+a:hover{
+    cursor: pointer;
+    color: #AA5042;
+    text-decoration: underline;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* HEADER STYLING */
+.mainNav{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    width: 100vw;
+    height: 2.25em;
+    /*background-color: rgb(197, 213, 227);*/
+    /*backdrop-filter: blur(1.5em);*/
+    background-color: transparent;
+    /*padding: 0 2em;*/
+    align-items: center;
+    align-content: center;
+    justify-content: right;
+    color: #808782;
+    top: 0;
+    z-index: 99999999;
+}
+.titleCont{
+    display: none;
+}
+.desktopMenu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    height: inherit;
+    width: 40%;
+    padding: 0 2em;
+    border-radius: 0 0 0 1em;
+    backdrop-filter: blur(2em);
+    z-index: 999999;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.menu li{
+    transition: .5s;
+}
+
+li:hover{
+    font-size: 1.25em;
+    color: #AA5042;
+}
+
+.searchBarCont{
+    display: none;
+    transition: .5s;
+    width: 100vw;
+    height: 8em;
+    position: fixed;
+    top: 2.25em;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+.searchBar{
+    font-size: 6em;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(.3em);
+    padding: 0 .3em;
+    outline: none;
+    border: none;
+    color: #808782;
+    z-index: 1000;
+}
+
+.left{
+    float: left;
+    align-self: flex-start;
+}
+
+.right{
+    float: right;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.center{
+    align-self: center;
+}
+
+.article{
+    height: 100vh;
+    scroll-snap-align: start;
+    padding: 1em;
+    overflow: hidden;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    position: relative;
+}
+
+.versalSect{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    padding: 1em;
+    backdrop-filter: blur(2px);
+    z-index: 999;
+}
+
+.versalTitle{
+    font-size: 3em;
+    padding-bottom: .5em;
+    transition: 3s;
+    padding-top: 1em
+}
+
+.versalProjectCont{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    padding-left: 4em;
+}
+
+.projectImages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1em;
+    height: 75%;
+    width: 100%;
+    
+}
+    .contentBox{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+.projectMain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectTwos{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noPad{
+    padding-top: 0;
+}
+
+.projectCarosel{
+    /*border: 1px pink solid;*/
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectImgCont{
+    /*border: solid 3px black;*/
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+    .main-carousel{
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-carousel .flickity-viewport{
+        height: 100% !important;
+        width: 100% !important;
+        overflow: hidden;
+    }
+        .carousel-cell{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*align-content: center;*/
+        }
+
+            .caroselImage{
+                justify-self: center;
+                align-self: center;
+                /*border: 1px yellow solid;*/
+                object-fit: contain;
+                height: 100%;
+                width: 100%;
+                padding: 2em 0;
+            }
+
+        .flickity-button {
+            background: transparent;
+        }
+        .flickity-button-previous{
+            align-self: flex-end;
+        }
+
+        .flickity-page-dots {
+            bottom: 0px;
+          }
+
+.projectAlone{
+    /*border: 1px blue solid;*/
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    .projectAloneImage{
+        /*border: pink 1px solid;*/
+        justify-self: center;
+        align-items: center;
+        padding: 2em 0;
+        height: 100%;
+    }
+
+
+/* ANIMATION CONTROLS */
+.scrollInFast{
+    animation: scrollInFastAnimation 2s linear forwards;
+}
+
+    @keyframes scrollInFastAnimation {
+        from{
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0%);
+            opacity: 1;
+        }
+    }
+
+.fadeSlideIn{
+    animation: fadeSlideInAnimation 1s linear forwards;
+}
+    @keyframes fadeSlideInAnimation{
+        from{
+            opacity: 0;
+            transform: translate(100%, 50%);
+        }
+        to{
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+    
+.fadeSlideInSlow{
+    animation: fadeSlideInSlowAnimation 2s linear forwards;
+}
+    @keyframes fadeSlideInSlowAnimation{
+        from{
+            opacity: 0;
+            transform: translate(-100%, 0%);
+        }
+        to{
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+
+.fadeIn{
+    animation: fadeInAnimation 1s linear forwards;
+}
+    @keyframes fadeInAnimation{
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+.scrollDown{
+    animation: scrollDownAnimation .1s linear forwards;
+}
+    @keyframes scrollDownAnimation{
+        from {
+            opacity: 0;
+            transform: translate(0%,-100%);
+        }
+        to{
+            opactiry: 1;
+            tranform: translateY(0%);
+        }
+    }
+
+.fadeOut{
+    animation: fadeOutAnimation 2s linear forwards;
+}
+
+    @keyframes fadeOutAnimation {
+        from{
+            opacity: 1;
+        }
+        to{
+            opacity: 0;
+        }
+    }
+.underlined {
+    text-decoration: underline;
+    font-size: 1.25em;
+    transition: .75s;
+}
+/* BODY STYLING */
+#bodyCont{
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+ /* INDES STYLING */
+    .indexLanding{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        column-gap: 4em;
+        justify-content: space-around;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: .2s ease-in;
+    }
+        .splashText{
+            width: 60%;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            row-gap: 1em;
+            transition: 1;
+            opacity: 0;
+        }
+            .large{
+                font-size: 5em;
+            }
+            .hollow{
+                -webkit-text-stroke-width: 3px;
+                -webkit-text-stroke-color: aliceblue;
+                color: transparent;
+            }
+
+            .medium{
+                font-size: 3.5em;
+            }
+
+        .practiceStatement{
+            width: 40%;
+            padding: 4em 1em 0em 1em;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2em;
+            display: none;
+            transition: 1s;
+            opacity: 0;
+        }
+            .arrowHouse{
+                border: solid 1px red;
+                height: 40%;
+            }
+    
+    .sectionTitles{
+        position: absolute;
+        z-index: 999;
+        width: 30%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        row-gap: 1em;
+        backdrop-filter: blur(.25em);
+        border-radius: 5em;
+        opacity: 0;
+        transition: 1s;
+        color: aliceblue;
+    }
+        .sectionTitle{
+            font-size: 3em;
+            padding-bottom: .5em;
+            opacity: 0;
+            transition: 3s;
+        }
+
+        /* GRAPHIC STYLING */
+    .graphicA{
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        column-gap: 2em;
+        background-color: black;
+        background-image: url('assests/images/instru/titlePage.png');
+        transition: background-image 1s ease-in;
+        z-index: 1;
+    }
+        .projectTitlesCont{
+            padding-left: 4em; 
+            display: flex;
+            flex-direction: column;
+            row-gap: 2em;
+            opacity: 0;
+        }
+            .projectTitle{
+                opacity: 0;
+                transition: .75s;
+            }
+            .projectTitle:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+        .sectionContentLeft{
+            position: relative;
+            float: right;
+            /*border: solid 1px orange;*/
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-left: calc(20%);
+            padding: 1em;
+        }
+        .sectionContentRight{
+            position: relative;
+            float: right;
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-right: calc(20%);
+            padding: 1em;
+        }
+
+        /* PROJECT IMAGES */
+            .instrumentAs{
+                display: flex;
+                /*opacity: 0;*/
+            }
+
+            .silenceImgs{
+                display: none;
+            }
+
+            .industryImgs{
+                display: none;
+            }
+            .postcardsImgs{
+                display: none;
+            }
+            .sentimentImgs{
+                display: none;
+            }
+            .projectText{
+                height: 30%;
+                width: 75%;
+                align-self: flex-end;
+            }
+
+    /* PHYSICAL STYLING */
+    .physicalArticle{
+        transition: background-image ease-in-out 1s;
+    }
+    
+    .physicalSection{
+        top: 0;
+        right: 0;
+        z-index: 999;
+        opacity: 0;
+        transition: 1s;
+        backdrop-filter: blur(2px);
+    }
+        .physicalTitle{
+            opacity: 0;
+        }
+        .physicalProjectTitles{
+            opacity: 0;
+        }
+        .physicalProjectTitle{
+            opacity: 0;
+            transition: .75s;
+        }
+            .physicalProjectTitle:hover{
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        /* PROJECT IMAGES */
+        .pianoContent{
+            display: none;
+
+        }
+        .handContent{
+            display: none;
+        }
+
+            }
+        .synthContent{
+            display: none;
+        }
+            .synthVideo{
+                width: 100%;
+            }
+        .samplesContent{
+            display: none;
+
+        }
+
+    /* DIGITAL STYLING */
+    .digitalSection{
+        opacity: 0;
+    }
+        .digitalTitle{
+            opacity: 0;
+        }
+        .digitalProjectTitles{
+            opacity: 0;
+        }
+        .digitalProjectTitle{
+            opacity: 0;
+        }
+        /* PROJECT IMAGES */
+
+    /* CONTACT STYLING */
+    .contactMe{
+        padding: 1em;
+        display: flex;
+        flex-direction: row;
+        column-gap: 1em;
+    }
+        .emailForm{
+            width: 60%;
+            height: 100%;
+        }
+            .form{
+                display: flex;
+                flex-direction: column;
+                row-gap: 2em;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                height: 100%;
+            }
+
+            .form h1{
+                font-size: 3em;
+                margin-bottom: 1em
+            }
+
+            .firstName, .lastName, .email, .emailQuery{
+                background: none;
+                outline: none;
+                border: none;
+                border-bottom: aliceblue 1px solid;
+                padding: 1em;
+                width: 50%;
+                font-size: 1.05125em;
+            }
+
+            .emailQuery{
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .emailSendButton{
+                background: rgb(125, 125, 125);
+                width: fit-content;
+                height: fit-content;
+                padding: 1em;
+                border-radius: 2em;
+                transition: .5s;
+            }
+                .emailSendButton:hover{
+                    background-color: #292E1E;
+                    border-radius: 0;
+                }
+
+            input, select, textarea{
+                color: aliceblue;
+            }
+            
+            textarea:focus, input:focus {
+                color: aliceblue;
+            }
+
+        .socials{
+            width: 40%;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            justify-content: center
+        }
+            .instaLogo{
+                font-size: 15em;
+            }
